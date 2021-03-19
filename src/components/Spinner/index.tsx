@@ -3,10 +3,13 @@ export interface SpinnerProps {
   color?: string;
 }
 
-export const Spinner = ({ size = "big", color = "" }: SpinnerProps) => {
+export const Spinner = ({
+  size = "big",
+  color = "text-accent",
+}: SpinnerProps) => {
   return (
     <svg
-      className={`animate-spin text-button ${
+      className={`animate-spin ${
         size === "big" ? "h-4 w-4" : "h-2 w-2"
       } ${color}`}
       xmlns="http://www.w3.org/2000/svg"
