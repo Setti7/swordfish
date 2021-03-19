@@ -2,19 +2,6 @@ module.exports = {
   /* config options here */
   webpack(config, { isServer, dev: isDevelopmentMode }) {
     config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/
-      },
-      use: [
-        {
-          loader: "@svgr/webpack"
-          // https://react-svgr.com/docs/options/
-        }
-      ]
-    })
-
-    config.module.rules.push({
       test: /\.po$/,
       use: [
         {

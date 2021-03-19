@@ -1,6 +1,5 @@
 import React from "react";
-import Logo from "../../assets/square-logo.svg";
-import { Button, ButtonProps } from "../Button";
+import { Button } from "../Button";
 import { Spinner } from "../Spinner";
 
 export interface HeroProps {
@@ -18,7 +17,7 @@ export const Hero = ({ title = "A simple Tailiwind template" }: HeroProps) => {
           <Button
             className="m-2 flex justify-center"
             size="big"
-            style="accent"
+            style="primary"
             disabled={false}
           >
             <Spinner />
