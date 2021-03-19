@@ -168,6 +168,7 @@ export const parameters = {
     },
   },
   backgrounds: {
+    default: "bg-on-figma",
     values: [
       {
         name: "bg-on-figma",

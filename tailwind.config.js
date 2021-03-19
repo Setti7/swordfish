@@ -1,4 +1,5 @@
 const purgeEnabled = process.env.NODE_ENV === "production";
+const colors = require("tailwindcss/colors");
 
 console.log("\n");
 console.log(`   TailwindCSS \n`);
@@ -26,8 +27,6 @@ module.exports = {
       // mono: ["Menlo", "Monaco", "Courier New", "monospace"],
     },
     colors: {
-      white: "white",
-      transparent: "transparent",
       primary: {
         DEFAULT: "#fdd835",
         "50": "#ffff67",
@@ -62,16 +61,25 @@ module.exports = {
         "800": "#173cdf",
         "900": "#0d32d5",
       },
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
     },
     extend: {
       borderRadius: {
-        "8": "8px",
+        xl: "16px",
       },
     },
   },
   variants: {
+    extend: {
+      backgroundColor: ["checked"],
+      borderColor: ["checked"],
+    },
     backgroundColor: ({ after }) => after(["disabled"]),
     textColor: ({ after }) => after(["disabled"]),
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
